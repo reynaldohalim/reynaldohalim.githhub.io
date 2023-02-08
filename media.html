@@ -7,19 +7,41 @@
 <link rel-"stylesheet" media="(orientation: portrait)" href-"portrait.css">
 <link rel="stylesheet" media="(orientation: landscape)" href="landscape.css">
 <style>
-  @media only screen and (max-width: 600px) {
-  h1 {
+  
+  .flex-container {
+  display: flex;
+  flex-wrap: nowrap; /* Other options: wrap */
+  background-color: darkblue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px){
+  h1{
     color: green;
   }
- }
- 
-  @media only screen and (min-width: 601px) {
-    h1 {
-      color: brown;
-    }
-   }
+}
+@media only screen and (max-width: 601px){
+  h1{
+    color: brown;
+  }
+}
+  
 </style>
 </head>
 <body>
+  <h1>Hello</h1>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
 </body>
 </html>
